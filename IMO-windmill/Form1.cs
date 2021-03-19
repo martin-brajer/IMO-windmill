@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-
 namespace IMO_windmill
 {
     public partial class Form_main : Form
@@ -16,8 +15,7 @@ namespace IMO_windmill
         private Point[] cornerPoints = new Point[4];
 
         /// <summary>
-        /// Members of S set.
-        /// Point [0, 0] is left top.
+        /// Members of S set. Coordinate origin is in top left.
         /// </summary>
         private List<Point> points = new List<Point>();
         private bool[] pointsColour;
@@ -29,7 +27,7 @@ namespace IMO_windmill
         private LastPointIndexes lastPointIndexes = new LastPointIndexes(-1, -1);
 
         /// <summary>
-        /// (-1) means empty.
+        /// Index of a point around which to rotate. (-1) means empty.
         /// </summary>
         private int _centerOfRotationIndex = -1;
         /// <summary>
@@ -51,6 +49,7 @@ namespace IMO_windmill
             get => _angle;
             set => _angle = AngleTrim(value);
         }
+
         public Point CenterOfRotation
         {
             get
@@ -152,7 +151,7 @@ namespace IMO_windmill
             graphics = Graphics.FromImage(pictureBox.Image);
 
             // Points.
-            float pointDiameter = 8;
+            float pointRadius = 4;
             for (int i = 0; i < points.Count; i++)
             {
                 Brush brush = Brushes.Blue;
@@ -163,10 +162,10 @@ namespace IMO_windmill
 
                 graphics.FillEllipse(
                     brush: brush,
-                    x: points[i].X - (pointDiameter / 2),
-                    y: points[i].Y - (pointDiameter / 2),
-                    width: pointDiameter,
-                    height: pointDiameter);
+                    x: points[i].X - pointRadius,
+                    y: points[i].Y - pointRadius,
+                    width: 2 * pointRadius,
+                    height: 2 * pointRadius);
             }
 
             // Mark center of rotation of the line.
@@ -443,15 +442,15 @@ namespace IMO_windmill
             }
         }
 
-        private void BtnErace_Click(object sender, EventArgs e)
+        private void BtnErase_Click(object sender, EventArgs e)
         {
             if (chBoxStart.Checked) return;
 
-            Erace();
+            Erase();
             Draw();
         }
 
-        private void Erace()
+        private void Erase()
         {
             points.Clear();
             CenterOfRotationIndex = -1;
@@ -463,7 +462,7 @@ namespace IMO_windmill
 
             if (int.TryParse(tBoxRng.Text, out int num))
             {
-                Erace();
+                Erase();
                 for (int i = 0; i < num; i++)
                 {
                     points.Add(new Point(random.Next(0, pictureBox.Image.Width), random.Next(0, pictureBox.Image.Height)));

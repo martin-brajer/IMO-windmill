@@ -33,7 +33,7 @@ namespace IMO_windmill
             this.lblRng = new System.Windows.Forms.Label();
             this.lblVelocity = new System.Windows.Forms.Label();
             this.btnRng = new System.Windows.Forms.Button();
-            this.btnErace = new System.Windows.Forms.Button();
+            this.btnErase = new System.Windows.Forms.Button();
             this.tBoxRng = new System.Windows.Forms.TextBox();
             this.tBoxPeriod = new System.Windows.Forms.TextBox();
             this.chBoxStart = new System.Windows.Forms.CheckBox();
@@ -79,15 +79,15 @@ namespace IMO_windmill
             this.btnRng.UseVisualStyleBackColor = true;
             this.btnRng.Click += new System.EventHandler(this.BtnRnd_Click);
             // 
-            // btnErace
+            // btnErase
             // 
-            this.btnErace.Location = new System.Drawing.Point(87, 12);
-            this.btnErace.Name = "btnErace";
-            this.btnErace.Size = new System.Drawing.Size(50, 41);
-            this.btnErace.TabIndex = 16;
-            this.btnErace.Text = "Erace";
-            this.btnErace.UseVisualStyleBackColor = true;
-            this.btnErace.Click += new System.EventHandler(this.BtnErace_Click);
+            this.btnErase.Location = new System.Drawing.Point(87, 12);
+            this.btnErase.Name = "btnErase";
+            this.btnErase.Size = new System.Drawing.Size(50, 41);
+            this.btnErase.TabIndex = 16;
+            this.btnErase.Text = "Erase";
+            this.btnErase.UseVisualStyleBackColor = true;
+            this.btnErase.Click += new System.EventHandler(this.BtnErase_Click);
             // 
             // tBoxRng
             // 
@@ -147,7 +147,7 @@ namespace IMO_windmill
             this.Controls.Add(this.lblRng);
             this.Controls.Add(this.lblVelocity);
             this.Controls.Add(this.btnRng);
-            this.Controls.Add(this.btnErace);
+            this.Controls.Add(this.btnErase);
             this.Controls.Add(this.tBoxRng);
             this.Controls.Add(this.tBoxPeriod);
             this.Controls.Add(this.chBoxStart);
@@ -170,7 +170,7 @@ namespace IMO_windmill
         private System.Windows.Forms.Label lblRng;
         private System.Windows.Forms.Label lblVelocity;
         private System.Windows.Forms.Button btnRng;
-        private System.Windows.Forms.Button btnErace;
+        private System.Windows.Forms.Button btnErase;
         private System.Windows.Forms.TextBox tBoxRng;
         private System.Windows.Forms.TextBox tBoxPeriod;
         private System.Windows.Forms.CheckBox chBoxStart;
