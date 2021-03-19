@@ -30,15 +30,15 @@ namespace IMO_windmill
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_main));
             this.lblNum = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblRng = new System.Windows.Forms.Label();
             this.lblVelocity = new System.Windows.Forms.Label();
-            this.btnRnd = new System.Windows.Forms.Button();
+            this.btnRng = new System.Windows.Forms.Button();
             this.btnErace = new System.Windows.Forms.Button();
             this.tBoxRng = new System.Windows.Forms.TextBox();
             this.tBoxPeriod = new System.Windows.Forms.TextBox();
             this.chBoxStart = new System.Windows.Forms.CheckBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.linkLabel_IMO = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,15 +50,6 @@ namespace IMO_windmill
             this.lblNum.Size = new System.Drawing.Size(41, 13);
             this.lblNum.TabIndex = 21;
             this.lblNum.Text = "<Num>";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(552, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "International Mathematical Olympiad 2011: Problem 2";
             // 
             // lblRng
             // 
@@ -78,15 +69,15 @@ namespace IMO_windmill
             this.lblVelocity.TabIndex = 19;
             this.lblVelocity.Text = "Velocity [deg/s]";
             // 
-            // btnRnd
+            // btnRng
             // 
-            this.btnRnd.Location = new System.Drawing.Point(143, 12);
-            this.btnRnd.Name = "btnRnd";
-            this.btnRnd.Size = new System.Drawing.Size(50, 41);
-            this.btnRnd.TabIndex = 17;
-            this.btnRnd.Text = "Rnd";
-            this.btnRnd.UseVisualStyleBackColor = true;
-            this.btnRnd.Click += new System.EventHandler(this.BtnRnd_Click);
+            this.btnRng.Location = new System.Drawing.Point(143, 12);
+            this.btnRng.Name = "btnRng";
+            this.btnRng.Size = new System.Drawing.Size(50, 41);
+            this.btnRng.TabIndex = 17;
+            this.btnRng.Text = "Rng";
+            this.btnRng.UseVisualStyleBackColor = true;
+            this.btnRng.Click += new System.EventHandler(this.BtnRnd_Click);
             // 
             // btnErace
             // 
@@ -135,16 +126,27 @@ namespace IMO_windmill
             this.pictureBox.TabStop = false;
             this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseClick);
             // 
+            // linkLabel_IMO
+            // 
+            this.linkLabel_IMO.AutoSize = true;
+            this.linkLabel_IMO.Location = new System.Drawing.Point(552, 15);
+            this.linkLabel_IMO.Name = "linkLabel_IMO";
+            this.linkLabel_IMO.Size = new System.Drawing.Size(257, 13);
+            this.linkLabel_IMO.TabIndex = 22;
+            this.linkLabel_IMO.TabStop = true;
+            this.linkLabel_IMO.Text = "International Mathematical Olympiad 2011: Problem 2";
+            this.linkLabel_IMO.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_IMO_LinkClicked);
+            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 689);
+            this.Controls.Add(this.linkLabel_IMO);
             this.Controls.Add(this.lblNum);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRng);
             this.Controls.Add(this.lblVelocity);
-            this.Controls.Add(this.btnRnd);
+            this.Controls.Add(this.btnRng);
             this.Controls.Add(this.btnErace);
             this.Controls.Add(this.tBoxRng);
             this.Controls.Add(this.tBoxPeriod);
@@ -165,15 +167,15 @@ namespace IMO_windmill
         #endregion
 
         private System.Windows.Forms.Label lblNum;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblRng;
         private System.Windows.Forms.Label lblVelocity;
-        private System.Windows.Forms.Button btnRnd;
+        private System.Windows.Forms.Button btnRng;
         private System.Windows.Forms.Button btnErace;
         private System.Windows.Forms.TextBox tBoxRng;
         private System.Windows.Forms.TextBox tBoxPeriod;
         private System.Windows.Forms.CheckBox chBoxStart;
         private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.LinkLabel linkLabel_IMO;
     }
 }
 

@@ -481,6 +481,11 @@ namespace IMO_windmill
             FindCornerPoints();
             Draw();
         }
+
+        private void LinkLabel_IMO_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.imo-official.org/problems.aspx");
+        }
     }
 
     internal enum Direction
